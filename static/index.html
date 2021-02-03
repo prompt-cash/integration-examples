@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+      body {
+          margin: 5px 5px 5px 5px;
+      }
+  </style>
+  <title>Prompt.Cash Static Demo</title>
+</head>
+<body>
+<h1>Prompt.Cash Static Demo</h1>
+
+<!--this is the form you can copy and paste from our website: https://prompt.cash/integration -->
+<!--Please replace the values in the form according to your needs.-->
+<!--All available parameters: https://prompt.cash/pub/docs/#create-a-new-payment-->
+<form name="prompt-cash-form" action="https://prompt.cash/pay" method="post">
+  <input type="hidden" name="token" value="1-bOLAua5k">
+  <input type="hidden" name="id" value="YOUR unique identifier for each payment">
+  <input type="hidden" name="amount" value="0.01">
+  <input type="hidden" name="currency" value="USD">
+  <input type="hidden" name="desc" value="Static HTML Demo">
+  <input type="hidden" name="return" value="http://your-store.com/paid.html">
+
+  <!--  The callback is optional-->
+  <!--  <input type="hidden" name="callback" value="http://your-store.com/api/v1/update-payment">-->
+  <button type="submit" class="btn btn-primary">Pay with BitcoinCash (BCH)</button>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

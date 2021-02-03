@@ -1,0 +1,13 @@
+{
+  "name": "integration-examples",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/prompt-cash/integration-examples",
+  "author": "Ekliptor",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^3.0.0"
+  }
+}
