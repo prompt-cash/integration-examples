@@ -1,5 +1,5 @@
 # Promt.cash integration examples
-This repository contains code examples of how to integrate [Promt.cash](https://promt.cash) 
+This repository contains code examples of how to integrate [Prompt.cash](https://prompt.cash) 
 as a payment processor in your backend.
 
 See our [API reference](https://prompt.cash/pub/docs/) for detailed descriptions
