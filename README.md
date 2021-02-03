@@ -10,17 +10,35 @@ This is the most minimalistic integration example into a [static HTML page](stat
 It will generate a new address for every payment. You can then view a payment history including
 "payment description/reference" and used addresses in your account.
 
+#### Installation
+Just put the 2 HTML files on your webserver and customize the `input` values
+in the `form` tag.
+
 ## Node.js
 See the [nodejs](nodejs) folder.
 
 This example can add server-side parameters (such as order ID) and 
 add a signature to each payment to prevent spoofing.
 
+#### Installation
+In the `index.js` file, add the following:
+- your Account `PublicToken` and `SecretToken`
+- customize payment amount, currency and other parameters as needed
+```
+yarn install # npm works too
+yarn start
+```
+
 ## PHP
 See the [php](php) folder.
 
 This example can add server-side parameters (such as order ID) and
 add a signature to each payment to prevent spoofing.
+
+#### Installation
+In the `index.php` file, add the following:
+- your Account `PublicToken` and `SecretToken`
+- customize payment amount, currency and other parameters as needed
 
 
 ## WordPress
