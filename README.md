@@ -7,7 +7,7 @@ of each parameter used in the following examples.
 
 ## static page
 This is the most minimalistic integration example into a [static HTML page](static).
-It will generate a new address for every payment. You can then we a payment history including
+It will generate a new address for every payment. You can then view a payment history including
 "payment description/reference" and used addresses in your account.
 
 ## Node.js
