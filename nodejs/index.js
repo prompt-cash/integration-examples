@@ -43,10 +43,12 @@ app.post('/api/v1/callback', (req, res) => {
     console.log("Received callback", req.body)
 
     // check if the payment is complete
-    if (req.body.payment.status === "PAID")
-        res.send("Payment complete. Update your database and ship your order.");
-    else if (req.body.payment.status === "EXPIRED")
-        res.send("The customer did not pay in time. You can cancel this order or send him a new payment link.");
+    if (req.body.token === secretToken) { // prevent spoofing
+        if (req.body.payment.status === "PAID")
+            res.send("Payment complete. Update your database and ship your order.");
+        else if (req.body.payment.status === "EXPIRED")
+            res.send("The customer did not pay in time. You can cancel this order or send him a new payment link.");
+    }
 })
 
 app.listen(port, () => {

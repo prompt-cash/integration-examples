@@ -1,9 +1,6 @@
 <?php
+require_once 'config.php';
 require_once 'functions.php';
-
-// values from your account: https://prompt.cash/account
-$publicToken = '';
-$secretToken = '';
 
 $params = array(
     'token' => $publicToken,

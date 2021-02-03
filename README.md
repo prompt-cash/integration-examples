@@ -36,8 +36,10 @@ This example can add server-side parameters (such as order ID) and
 add a signature to each payment to prevent spoofing.
 
 #### Installation
-In the `index.php` file, add the following:
+In the `config.php` file, add the following:
 - your Account `PublicToken` and `SecretToken`
+
+In the `index.php` file, add the following:  
 - customize payment amount, currency and other parameters as needed
 
 
