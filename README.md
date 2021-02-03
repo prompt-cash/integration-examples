@@ -14,6 +14,7 @@ It will generate a new address for every payment. You can then view a payment hi
 Just put the 2 HTML files on your webserver and customize the `input` values
 in the `form` tag.
 
+
 ## Node.js
 See the [nodejs](nodejs) folder.
 
@@ -28,6 +29,7 @@ In the `index.js` file, add the following:
 yarn install # npm works too
 yarn start
 ```
+
 
 ## PHP
 See the [php](php) folder.
