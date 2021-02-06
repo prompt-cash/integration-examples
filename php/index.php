@@ -42,7 +42,7 @@ $params['signature'] = generatePromptCashSignature($params, $secretToken);
     <p>Thanks for your payment. We will email you when your order gets shipped.</p>
 <?php else: ?>
     <!--this is the form you can copy and paste from our website: https://prompt.cash/integration -->
-    <form name="prompt-cash-form" action="http://danielmac.local:2929/pay" method="get">
+    <form name="prompt-cash-form" action="https://prompt.cash/pay" method="get">
         <?php foreach ($params as $name => $value): ?>
             <input type="hidden" name="<?php echo $name;?>" value="<?php echo $value;?>">
         <?php endforeach; ?>

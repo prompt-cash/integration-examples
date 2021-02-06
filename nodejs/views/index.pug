@@ -16,7 +16,7 @@ html(lang='en')
       p Thanks for your payment. We will email you when your order gets shipped.
     else
       // this is the form you can copy and paste from our website: https://prompt.cash/integration
-      form(name='prompt-cash-form' action='http://danielmac.local:2929/pay' method='get')
+      form(name='prompt-cash-form' action='https://prompt.cash/pay' method='get')
         each value, name in params
           input(type='hidden' name=name value=value)
         button.btn.btn-success(type='submit') Pay with BitcoinCash (BCH)
