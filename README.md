@@ -59,13 +59,13 @@ upcoming WordPress plugin soon
             |                                     |                                   |
             |--(1)--Payment Request-------------->|                                   |
             |                                     |                                   |
-            |<--------(2)--Generate Payment Form--|                                   |
+            |<--(2)--Generate Payment Form--------|                                   |
             |                                     |                                   |
-            |--(3)--Click "Pay" & Go to Gateway-------------------------------------->|
+            |---(3)--Click "Pay" & Go to Gateway------------------------------------->|
             |                                     |                                   |
             |                                     |<---(4)--Payment Success Callback--|
             |                                     |                                   |
-            |<------------------------------(5) Send Customer back to Return URL------|
+            |<---------------------------------(5)--Send Customer back to Return URL--|
             |                                     |                                   |
             |                                     |                                   |
 ```
