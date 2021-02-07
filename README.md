@@ -49,5 +49,27 @@ In the `index.php` file, add the following:
 upcoming WordPress plugin soon
 
 
+## Payment Control flow
+``` text 
+     +-------------+                      +-------------+                      +-------------+
+     |             |                      |   Merchant  |                      | Prompt.Cash |
+     |   Customer  |                      |   Website   |                      | Payment     |
+     |             |                      |             |                      | Gateway     |
+     +-------------+                      +-------------+                      +-------------+
+            |                                     |                                   |
+            |--(1)--Payment Request-------------->|                                   |
+            |                                     |                                   |
+            |<--------(2)--Generate Payment Form--|                                   |
+            |                                     |                                   |
+            |--(3)--Click "Pay" & Go to Gateway-------------------------------------->|
+            |                                     |                                   |
+            |                                     |<---(4)--Payment Success Callback--|
+            |                                     |                                   |
+            |<------------------------------(5) Send Customer back to Return URL------|
+            |                                     |                                   |
+            |                                     |                                   |
+```
+
+
 ## Contact
 Follow me on [Twitter](https://twitter.com/ekliptor) and [Memo](https://memo.cash/profile/1JFKA1CabVyX98qPRAUQBL9NhoTnXZr5Zm).
