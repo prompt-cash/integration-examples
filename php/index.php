@@ -4,7 +4,7 @@ require_once 'functions.php';
 
 $params = array(
     'token' => $publicToken,
-    'id' => getRandomString(12), // put your Order ID or other unique ID here (MySQL primary key or MongoDB _id)
+    'tx_id' => getRandomString(12), // put your Order ID or other unique ID here (MySQL primary key or MongoDB _id)
     'amount' => sprintf("%.2f", 0.01), // make sure to use string with fixed decimals to avoid floating point inconsistency
     'currency' => 'USD',
     'desc' => 'PHP Demo',

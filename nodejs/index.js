@@ -6,24 +6,24 @@ app.use(express.json()); // middleware to parse the JSON callback
 const functions = require('./functions')
 
 // values from your account: https://prompt.cash/account
-const publicToken = "";
-const secretToken = "";
+const publicToken = "29-Cg2K8RSB";
+const secretToken = "29-FOYcmJZTnbHFPdCxfdbGw8qofnMf4R6CKp0hA9yhBUnKrluygwPuMOUyRPYspR9m";
 
 // render the index page
 app.get('/', (req, res) => {
     const params = {
         token: publicToken,
-        id: functions.getRandomString(12), // put your Order ID or other unique ID here (MySQL primary key or MongoDB _id)
+        tx_id: functions.getRandomString(12), // put your Order ID or other unique ID here (MySQL primary key or MongoDB _id)
         amount: "0.01", // make sure to use string with fixed decimals to avoid floating point inconsistency
         currency: "USD",
         desc: "Node.Js Demo",
 
         // the URL to send the customer back to after payment
-        return: "http://localhost:3000/?paid=1",
+        return: "http://51.255.199.64:3000/?paid=1",
 
         // Where to notify you of changes in the payment status (expired or paid).
         // This must be on a public domain. The callback will not work when you are testing on localhost!
-        callback: "http://localhost:3000/api/v1/callback",
+        callback: "http://51.255.199.64:3000//api/v1/callback",
 
         time: Math.floor(Date.now() / 1000),
         signature: ""

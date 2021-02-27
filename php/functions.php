@@ -8,7 +8,7 @@
  * @return string
  */
 function generatePromptCashSignature(array $params, string $secretToken): string {
-    return hash('sha256', $secretToken . $params['token'] . $params['id'] . $params['amount'] .
+    return hash('sha256', $secretToken . $params['token'] . $params['tx_id'] . $params['amount'] .
         $params['currency'] . $params['desc'] . $params['callback'] . $params['return'] . $params['time']);
 }
 

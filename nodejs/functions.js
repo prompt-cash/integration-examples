@@ -8,7 +8,7 @@ const crypto = require('crypto')
  * @returns {string}
  */
 function generatePromptCashSignature(params, secretToken) {
-    const input = secretToken + params.token + params.id + params.amount +
+    const input = secretToken + params.token + params.tx_id + params.amount +
         params.currency + params.desc + params.callback + params.return + params.time;
     return crypto.createHash('sha256').update(input, 'utf8').digest('hex');
 }
