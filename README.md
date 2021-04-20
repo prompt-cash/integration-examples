@@ -46,7 +46,9 @@ In the `index.php` file, add the following:
 
 
 ## WordPress
-upcoming WordPress plugin soon
+Just download our [WordPress plugin](https://wordpress.org/plugins/prompt-cash-monetize-your-blog-with-bitcoin-cash/).
+
+You can install it directly within WordPress under Plugins -> Add New
 
 
 ## Payment Control flow
