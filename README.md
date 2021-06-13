@@ -51,6 +51,15 @@ Just download our [WordPress plugin](https://wordpress.org/plugins/prompt-cash-m
 You can install it directly within WordPress under Plugins -> Add New
 
 
+## Android
+We have an [Anrdoi App Demo](https://github.com/prompt-cash/androidDemo)
+that shows you how to:
+- display a QR code
+- check for payment status
+
+You can use this app as a template to accept Point of Sale (POS) payments.
+
+
 ## Payment Control flow
 ``` text 
      +-------------+                      +-------------+                      +-------------+
