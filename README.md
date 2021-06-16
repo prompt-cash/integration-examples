@@ -5,6 +5,8 @@ as a payment processor in your backend.
 See our [API reference](https://prompt.cash/pub/docs/) for detailed descriptions
 of each parameter used in the following examples.
 
+Also watch our [merchant introduction video](https://www.youtube.com/watch?v=8TIpZW1P_9M).
+
 ## static page
 This is the most minimalistic integration example into a [static HTML page](static).
 It will generate a new address for every payment. You can then view a payment history including
@@ -83,4 +85,7 @@ You can use this app as a template to accept Point of Sale (POS) payments.
 
 
 ## Contact
-Follow me on [Twitter](https://twitter.com/ekliptor) and [Memo](https://memo.cash/profile/1JFKA1CabVyX98qPRAUQBL9NhoTnXZr5Zm).
+[Website](https://prompt.cash/) -
+[Twitter](https://twitter.com/CashPrompt) -
+[Telegram](https://t.me/PromptCash) -
+[YouTube](https://www.youtube.com/channel/UClfNVdL3T0RF6pF1yGi9teg)
