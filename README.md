@@ -53,6 +53,11 @@ Just download our [WordPress plugin](https://wordpress.org/plugins/prompt-cash-m
 You can install it directly within WordPress under Plugins -> Add New
 
 
+## WHCMS
+[Payment plugin](https://github.com/prompt-cash/prompt-cash-whmcs) for web hosting
+providers & resellers using WHCMS to manage their customer invoicing.
+
+
 ## Android
 We have an [Anrdoi App Demo](https://github.com/prompt-cash/androidDemo)
 that shows you how to:
