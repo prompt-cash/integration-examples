@@ -67,6 +67,9 @@ that shows you how to:
 You can use this app as a template to accept Point of Sale (POS) payments.
 
 
+## SLP Tokens
+To receive payments in your own SLP token, please [follow this guide](./SlpTokens.md).
+
 ## Payment Control flow
 ``` text 
      +-------------+                      +-------------+                      +-------------+
