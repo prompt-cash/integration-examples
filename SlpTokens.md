@@ -3,14 +3,15 @@ You can add your own [SLP token](https://simpleledger.cash/) to our processor to
 in your token.
 
 Prompt.Cash will take care of exchange rate updates automatically for you.
-For example `&amount=10&currency=EUR&slp_token=USDT` would request a payment of 10 EUR taking into account:
+For example `&amount=10&currency=EUR&slp_token=USDT` would request a payment of 10 EUR 
+using Tether (on BitcoinCash) taking into account:
 - the current USD/EUR exchange rate
 - the current USD/USDT exchange rate
 
 
 ## Token integration
 Your token needs to be approved manually. This process only takes a few
-minutes and is manily done to prevent scams (you can not submit a token
+minutes and is mainly done to prevent scams (you can not submit a token
 called `USDT` or any other existing symbol).
 
 Steps to integrate your own SLP token:
