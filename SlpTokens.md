@@ -5,7 +5,7 @@ in your token.
 Prompt.Cash will take care of exchange rate updates automatically for you.
 For example `&amount=10&currency=EUR&slp_token=USDT` would request a payment of 10 EUR 
 using Tether (on BitcoinCash) taking into account:
-- the current USD/EUR exchange rate
+- the current EUR/USD exchange rate
 - the current USD/USDT exchange rate
 
 
