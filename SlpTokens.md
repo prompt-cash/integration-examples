@@ -39,6 +39,16 @@ Please refer there for further details.
 The REST API also allows you to generate secure payment links per customer
 on your own backend (links that can't be spoofed).
 
+
+## Token creation
+
+To create your own SLP token on BitcoinCash you can:
+1. open [Electron Cash SLP Edition](https://github.com/simpleledger/Electron-Cash-SLP) wallet
+2. navigate to the `Tokens` tab
+3. click on `Create new Token` at the bottom
+
+![Add-SLP-Token](docs/slp-token-add.png)
+
 ## Contact
 [Website](https://prompt.cash/) -
 [Twitter](https://twitter.com/CashPrompt) -
