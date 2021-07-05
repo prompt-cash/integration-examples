@@ -45,7 +45,9 @@ on your own backend (links that can't be spoofed).
 To create your own SLP token on BitcoinCash you can:
 1. open [Electron Cash SLP Edition](https://github.com/simpleledger/Electron-Cash-SLP) wallet
 2. navigate to the `Tokens` tab
-3. click on `Create new Token` at the bottom
+3. click on `Create New Token` at the bottom
+4. fill out all the fields in the new window
+5. click on `Create New Token`
 
 ![Add-SLP-Token](docs/slp-token-add.png)
 
