@@ -19,6 +19,7 @@ Steps to integrate your own SLP token:
 1. Contact us to whitelist/approve your SLP token. Please submit:
     - **SLP token ID**: you can find it on the [SLP token explorer](https://simpleledger.info/)
     - **Project Website** & contact address (Telegram or Email)
+    - **Token Icon**: a quadradic 128x128 sized PNG icon for your token  
     - **USD exchange rate** for your token (can be fixed or an API of an exchange)
 2. After approval, open the [Accounts Page](https://prompt.cash/account) and enable the checkbox `Enable SLP Tokens`.
    You must **connect a Wallet that supports SLP tokens** (such as [Electron Cash SLP Edition](https://github.com/simpleledger/Electron-Cash-SLP)) or else
