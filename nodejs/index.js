@@ -2,7 +2,12 @@ const express = require('express')
 const app = express()
 const port = 3000
 app.set('view engine', 'pug')
-app.use(express.json()); // middleware to parse the JSON callback
+// middleware to parse the JSON callback. Keeps the raw body to verify the X-Signature header
+app.use(express.json({
+    verify: (req, res, buf) => {
+        req.rawBody = buf;
+    }
+}));
 const functions = require('./functions')
 
 // values from your account: https://prompt.cash/account
@@ -38,19 +43,24 @@ app.get('/', (req, res) => {
 // process the payment callback we receive from Prompt.Cash
 app.post('/api/v1/callback', (req, res) => {
     // The content type to respond is ignored by Prompt.Cash but you should return HTTP Status Code 200
-    res.contentType("text/plain; charset=UTF-8'");
+    res.contentType("text/plain; charset=UTF-8");
+
+    // prevent spoofing: only trust callbacks signed with your secret token
+    if (!functions.isValidPromptCashCallback(req, secretToken)) {
+        res.status(403).send("invalid signature");
+        return;
+    }
     res.send("ok"); // any response is fine (ignored by Prompt.Cash)
 
-    console.log("Received callback", req.body)
+    const {token, ...callback} = req.body; // never log your secret token
+    console.log("Received callback", callback)
 
     // check if the payment is complete
-    if (req.body.token === secretToken) { // prevent spoofing
-        if (req.body.payment.status === "PAID") {
-            // Payment complete. Update your database and ship your order.
-        }
-        else if (req.body.payment.status === "EXPIRED") {
-            // The customer did not pay in time. You can cancel this order or send him a new payment link.
-        }
+    if (req.body.payment.status === "PAID") {
+        // Payment complete. Update your database and ship your order.
+    }
+    else if (req.body.payment.status === "EXPIRED") {
+        // The customer did not pay in time. You can cancel this order or send him a new payment link.
     }
 })
 

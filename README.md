@@ -7,6 +7,14 @@ of each parameter used in the following examples.
 
 Also watch our [merchant introduction video](https://www.youtube.com/watch?v=8TIpZW1P_9M).
 
+## Verifying payment callbacks
+Every `callback` request carries an `X-Signature` HTTP header: the hex `HMAC-SHA256` of the
+raw request body, keyed with your `SecretToken`. The PHP (`isValidPromptCashCallback()` in `php/functions.php`)
+and Node.js (`nodejs/functions.js`) examples verify it and reject spoofed callbacks.
+
+The JSON key `token` (your secret token in the callback body) is **deprecated** and will be removed.
+Don't use it for verification anymore.
+
 ## static page
 This is the most minimalistic integration example into a [static HTML page](static).
 It will generate a new address for every payment. You can then view a payment history including

@@ -13,6 +13,33 @@ function generatePromptCashSignature(params, secretToken) {
     return crypto.createHash('sha256').update(input, 'utf8').digest('hex');
 }
 
+/**
+ * Check if a payment callback really comes from Prompt.Cash (prevents spoofing).
+ * Prompt.Cash signs the raw request body with your secret token and sends the result
+ * in the "X-Signature" HTTP header: hex(HMAC-SHA256(key = secretToken, message = raw body)).
+ * @param req the express request (req.rawBody must be set, see express.json() "verify" option)
+ * @param secretToken
+ * @returns {boolean}
+ */
+function isValidPromptCashCallback(req, secretToken) {
+    if (!secretToken)
+        return false;
+    const signature = (req.get("X-Signature") || "").trim().toLowerCase();
+    if (signature) {
+        const expected = crypto.createHmac('sha256', secretToken).update(req.rawBody || "").digest('hex');
+        return safeEqual(expected, signature);
+    }
+
+    // Deprecated: the "token" JSON key will be removed. Only kept for the transition period.
+    return typeof req.body.token === "string" && safeEqual(secretToken, req.body.token);
+}
+
+function safeEqual(a, b) {
+    const bufA = Buffer.from(a, 'utf8');
+    const bufB = Buffer.from(b, 'utf8');
+    return bufA.length === bufB.length && crypto.timingSafeEqual(bufA, bufB);
+}
+
 function getRandomString(len) {
     let chars = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
     let random = ''
@@ -21,4 +48,4 @@ function getRandomString(len) {
     return random
 }
 
-module.exports = {generatePromptCashSignature, getRandomString}
+module.exports = {generatePromptCashSignature, isValidPromptCashCallback, getRandomString}
